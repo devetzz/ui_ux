@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrap">
+        <form method='get' action='#'>
+            <fieldset>
+                <legend>취미 입력1</legend>
+                <label for="hobby1">당구</label><input type="radio" name="hobby" id="hobby1" value="당구">
+                <label for="hobby2">게임</label><input type="radio" name="hobby" id="hobby2" value="게임">
+                <label for="hobby3">영화</label><input type="radio" name="hobby" id="hobby3" value="영화">
+            </fieldset>
+            <fieldset>
+                <legend>취미 입력2</legend>
+                <label for="hobbycb1">당구</label><input type="checkbox" name="hobbycb" id="hobbycb1" value="당구">
+                <label for="hobbycb2">게임</label><input type="checkbox" name="hobbycb" id="hobbycb2" value="게임">
+                <label for="hobbycb3">영화</label><input type="checkbox" name="hobbycb" id="hobbycb3" value="영화">
+            </fieldset>
+            <fieldset>
+                <legend>막대바 진행</legend>
+                <label for="#">현재 진행 사항</label><input type="range" name="range" id="range" min="0" max="100" step="1" value="20">
+            </fieldset>
+            <!-- <input type="submit" value="서버로 전송"> -->
+            <input type="image" src="../images/login.png" alt="로그인">
+            <input type="reset" value="초기화">
+            <input type="button" value="버튼" onclick="window.alert('전송버튼')">
+            <input type="button" value="새창열기" onclick="window.open('./01form.html')">
+        </form>
+
+    </div>
+</body>
+</html>

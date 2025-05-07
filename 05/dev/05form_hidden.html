@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrap">
+        <form method='get' action='#'>
+            <fieldset>
+                <legend>개인 정보</legend>
+                <input type="hidden" name="id" value="abcd1234">
+                <label for="name1">이름1</label> <input type="text" name="name1" id="name1" readonly value="홍길동"><br>
+                <label for="name2">이름2</label> <input type="text" name="name2" id="name2"><br>
+                <label for="name3">이름3</label> <input type="text" name="name3" id="name3" autofocus><br>
+                <label for="name4">이름4</label> <input type="text" name="name4" id="name4"><br>
+                <label for="memo">메모장</label> <textarea name="memo" id="memo" cols="30" rows="10"></textarea><br>
+                <label for="product">상품 선택</label>
+                <select name="product" id="product">
+                    <option value="5kg">선물용 5kg</option>
+                    <option value="4kg">선물용 4kg</option>
+                    <option value="3kg" selected>선물용 3kg</option>
+                    <option value="2kg">선물용 2kg</option>
+                </select>
+            </fieldset>
+            <input type="submit" value="전송">
+        </form>
+    </div>
+</body>
+</html>
