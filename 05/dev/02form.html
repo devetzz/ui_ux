@@ -6,17 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-    <form method='post' action='#' style="width: 80%; margin: 0 auto;">
-        <fieldset>
-            <legend>배송 정보</legend>
-            <ul>
-                <li><label for="name">이름 </label><input type='text' name='name' id="name"></li>
-                <li><label for="address">배송 주소 </label><input type='text' name='address' id="address"></li>
-                <li><label for="mail">이메일 </label><input type='text' name='mail' id="mail"></li>
-                <li><label for="phoneNum">연락처 </label><input type='text' name='phoneNum' id="phoneNum"></li>
-            </ul>
-
-        </fieldset>
-    </form>
+    <div class="wrap" style="width: 80%; margin: 0 auto;">
+        <form method='get' action='input.jsp' style="width: 80%; margin: 0 auto;">
+            <fieldset>
+                <legend>배송 정보</legend>
+                <ul>
+                    <li><label for="name">이름 </label><input type='text' name='name' id="name" size="20" maxlength="4" minlength="2" value="홍길동"></li>
+                    <li><label for="address">배송 주소 </label><input type='text' name='address' id="address"></li>
+                    <li><label for="mail">이메일 </label><input type='email' name='mail' id="mail" required></li>
+                    <li><label for="phoneNum">연락처 </label><input type='number' name='phoneNum' id="phoneNum" placeholder="01011112222" minlength="11"></li>
+                </ul>
+                <input type="submit" value="서버로 전송">
+    
+            </fieldset>
+        </form>
+    </div>
 </body>
 </html>
