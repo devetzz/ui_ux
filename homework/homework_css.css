@@ -1,0 +1,18 @@
+div{
+    width: 60%;
+    margin: 0 auto;
+}
+table,th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-size: small;
+}
+th{
+    text-align: left;
+    background-color: rgb(254, 238, 185);
+    padding-left: 5px;
+    padding-right: 40px;
+}
+td{
+    padding-left: 10px;
+}
