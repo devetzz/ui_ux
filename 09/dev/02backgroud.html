@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100%;
+            height: 200vh;
+            background-color: beige;
+            background-image: url('../images/bg2.png');
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-attachment: fixed;
+        }
+        div{
+            width: 400px;
+            height: 200px;
+            border: 10px solid rgba(190, 190, 190, 0.5);
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: rgba(0, 0, 255, 0.2);
+            background-image: url('../images/bg3.png');
+            background-repeat: no-repeat;
+            background-position: top right;
+            background-size: 70px 100px;
+        }
+        .bg1{
+            background-origin: border-box;
+        }
+        .bg2{
+            background-origin: padding-box;
+        }
+        .bg3{
+            background-origin: content-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste recusandae omnis ullam. Saepe quasi nostrum fugit autem, cupiditate deleniti odit ipsam accusamus, sint totam dolorum quam amet atque cum dolores!</p>
+    </div>
+    <div class="bg2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste recusandae omnis ullam. Saepe quasi nostrum fugit autem, cupiditate deleniti odit ipsam accusamus, sint totam dolorum quam amet atque cum dolores!</p>
+    </div>
+    <div class="bg3">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste recusandae omnis ullam. Saepe quasi nostrum fugit autem, cupiditate deleniti odit ipsam accusamus, sint totam dolorum quam amet atque cum dolores!</p>
+    </div>
+</body>
+</html>

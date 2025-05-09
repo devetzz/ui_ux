@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+            border-radius: 5px;
+            /* border: 1px solid black; */
+            padding: 10px;
+        }
+        .wrap{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        p{
+            text-align: center;
+            color: white;
+        }
+        article{
+            background-color: rgb(15, 79, 241);
+        }
+        
+        /* header 영역 */
+        header{
+            width: 100%;
+            background-color: rgb(0, 132, 255);
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        nav{
+            width: 100%;
+            background-color: rgb(133, 196, 38);
+        }
+        /* section 영역 */
+        .main-wrap{
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+            margin-bottom: 10px;
+        }
+        main{
+            width: 70%;
+            background-color: rgb(101, 227, 255);
+        }
+        main > header{
+            margin-bottom: 10px;
+        }
+        section{
+            background-color: rgb(10, 150, 82);
+            margin-bottom: 10px;
+        }
+        .article-wrap{
+            display: flex;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+        main > section > article{
+            width: 49%;
+            background-color: rgb(15, 79, 241);
+            margin-bottom: 10px;
+        }
+        .art1, .art2{
+            width: 49%;
+        }
+
+        main > article{
+            margin-bottom: 10px;
+        }
+        .section-wrap{
+            display: flex;
+            justify-content: space-between;
+        }
+        .sec1, .sec2{
+            width: 49%;
+        }
+        aside{
+            width: 29%;
+            background-color: rgb(163, 78, 244);
+            margin: 0;
+        }
+        aside > article{
+            margin-bottom: 10px;
+        }
+
+        aside > section > article{
+            margin-bottom: 10px;
+        }
+        .article-wrap2{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        /* footer 영역 */
+        footer{
+            width: 100%;
+            background-color: blue;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header><p>&lt;header&gt;</p>
+            <nav><p>&lt;nav&gt;</p></nav>
+        </header>
+        <div class="main-wrap">
+            <main><p>&lt;main&gt;</p>
+                <header><p>&lt;header&gt;</p></header>
+                <section><p>&lt;section&gt;</p>
+                    <div class="article-wrap">
+                        <article class="art1"><p>&lt;article1&gt;</p>
+                            <footer><p>&lt;footer&gt;</p></footer>
+                        </article>
+                        <article class="art2"><p>&lt;article2&gt;</p>
+                            <footer><p>&lt;footer&gt;</p></footer>
+                        </article>
+                    </div>
+                </section>
+                <article><p>&lt;article&gt;</p>
+                    <div class="section-wrap">
+                        <section class="sec1"><p>&lt;section1&gt;</p></section>
+                        <section class="sec2"><p>&lt;section2&gt;</p></section>
+                    </div>
+                </article>
+
+
+                <footer><p>&lt;footer&gt;</p></footer>
+            </main>
+            <aside><p>&lt;aside&gt;</p>
+                <article><p>&lt;article1&gt;</p>
+                    <footer><p>&lt;footer&gt;</p></footer>
+                </article>
+                <section><p>&lt;section&gt;</p>
+                    <footer><p>&lt;footer&gt;</p></footer>
+                </section>
+                <section><p>&lt;section&gt;</p>
+                    <div class="article-wrap2">
+                        <article><p>&lt;article1&gt;</p>
+                            <footer><p>&lt;footer&gt;</p></footer>
+                        </article>
+                        <article><p>&lt;article2&gt;</p>
+                            <footer><p>&lt;footer&gt;</p></footer>
+                        </article>
+                    </div>
+                </section>
+            </aside>
+
+        </div>
+        <footer><p>&lt;footer&gt;</p>
+            <nav><p>&lt;nav&gt;</p></nav>
+        </footer>
+    </div>
+</body>
+</html>
