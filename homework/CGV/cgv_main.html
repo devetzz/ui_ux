@@ -4,8 +4,381 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+    </style>
+    <link rel="stylesheet" href="./cgv_css.css">
 </head>
 <body>
-    
+    <div class="wrap">
+        <!-- 헤더 이미지 -->
+        <div class="headImage">
+            <img src="./image/header_image.jpg" alt="headImage">
+        </div>
+        <!-- 로고 + 멤버기능 -->
+        <div class="header_content">
+            <div class="logo_contents">
+                <h1>
+                    <img src="./image/CGV_logo.png" alt="cgv_logo">
+                    <span>DEEP DIVE SPACE</span>
+                </h1>
+
+                <ul class="memberinfo_wrap">
+                    <li>
+                        <img src="./image/freet.jpg" alt="freet_ad">
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./image/loginPassword.png" alt="로그인">
+                            <span>로그인</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./image/loginJoin.png" alt="회원가입">
+                            <span>회원가입</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./image/loginMember.png" alt="MY CGV">
+                            <span>MY CGV</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./image/loginCustomer.png" alt="고객센터">
+                            <span>고객센터</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 메뉴바 -->
+        <div class="nav">
+            <div class="menu_contents">
+                <ul class="nav_menu">
+                    <li>
+                        <h2>
+                            <a href="">영화</a>
+                        </h2>
+                    </li>
+                    <li>
+                        <h2>
+                            <a href="">극장</a>
+                        </h2>
+                    </li>
+                    <li>
+                        <h2>
+                            <a href="">예매</a>
+                        </h2>
+                    </li>
+                    <li>
+                        <h2>
+                            <a href="">스토어</a>
+                        </h2>
+                    </li>
+                    <li>
+                        <h2>
+                            <a href="">이벤트</a>
+                        </h2>
+                    </li>
+                    <li>
+                        <h2>
+                            <a href="">혜택</a>
+                        </h2>
+                    </li>
+                </ul>
+            </div>
+            <form method='get' action='#'>
+                <input type='search' name='name' placeholder='세븐 베일즈'>
+                <i class="fa-solid fa-magnifying-glass" onclick="alert('검색버튼 이벤트 발생')"></i>
+            </form>
+        </div>
+        <!-- 메인 이미지 -->
+        <div class="main_image">
+            <div class="vidio_wrap">
+                <video autoplay muted>
+                    <source src="./image/SevenVeils_1080x608_PC.mp4" type="video/mp4">
+                    이 브라우저는 Video 태그를 지원하지 않습니다. (Your browser does not support the video tag.)
+                </video>
+            </div>
+        </div>
+
+        <!-- 무비 차트 -->
+        <div class="movie">
+            <div class="movie_top">
+                <div class="movieH1">
+                    <h1>무비차트 <span style="font-size: x-large;">|</span> <span style="color: gray;">상영예정작</span></h1>
+                </div>
+                <div class="rightBtn">
+                    <a href="https://">전체보기</a>
+                </div>
+            </div>
+            <div class="movieChart_wrap">
+                <div class="movieList">
+                    <img src="./image/1missonimpossible.jpg" alt="미션 임파서블">
+                </div>
+                <div class="movieList">
+                    <img src="./image/2thundervolts.jpg" alt="썬더볼트">
+                </div>
+                <div class="movieList">
+                    <img src="./image/3파과.jpg" alt="파과">
+                </div>
+                <div class="movieList">
+                    <img src="./image/4virus.jpg" alt="바이러스">
+                </div>
+                <div class="movieList">
+                    <img src="./image/5귀칼.jpg" alt="귀멸의칼날">
+                </div>
+            </div>
+        </div>
+
+
+        <!-- EVENT -->
+        <div class="event">
+            <div class="event_wrap">
+                <div class="event_top">
+                    <h1>EVENT</h1>
+                    <div class="event_btn">
+                        <!-- <a href="" class="btn_play">재생</a> -->
+                        <a href="" class="btn_allView">전체보기</a>
+                    </div>
+                </div>
+                <div class="event_list">
+                    <div class="event_list_wrap">
+                        <div class="event_content">
+                            <a href="">
+                                <div class="event_img">
+                                    <img src="./image/event1.jpg" alt="오구오구">
+                                </div>
+                                <strong>5월엔 CGV가 오구오구</strong>
+                                <span>2025.04.28~2025.05.16</span>
+                            </a>
+                        </div>
+                        <div class="event_content">
+                            <a href="">
+                                <div class="event_img">
+                                    <img src="./image/event2.jpg" alt="귀멸의칼날-무한열차편">
+                                </div>
+                                <strong>[극장판 귀멸의 칼날-무한열차편] 4DX포스터</strong>
+                                <span>2025.05.02~2025.05.16</span>
+                            </a>
+                        </div>
+                        <div class="event_content">
+                            <a href="">
+                                <div class="event_img">
+                                    <img src="./image/event3.jpg" alt="미션 임파서블">
+                                </div>
+                                <strong>[미션 임파서블:파이널레코닝] SX 포스터</strong>
+                                <span>2025.05.09~2025.05.24</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 특별관 -->
+        <div class="specialHall">
+            <div class="specialHall_wrap">
+                <div class="specialHall_top">
+                    <h1>특별관</h1>
+                    <a href="">전체보기</a>
+                </div>
+                <div class="specialHall_content">
+                    <div class="specialHall_image">
+                        <img src="./image/cinedechef.png" alt="CINE de CHEF">
+                    </div>
+                    <ul class="specialHall_list">
+                        <li>
+                            <a href="">
+                                <strong>SUITE CINEMA</strong>
+                                <div class="specialHall_hashTag_wrap">
+                                    <span class="specialHall_hashTag">#호텔 컨셉의 프리미엄관</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <strong>CINE & LIVINGROOM</strong>
+                                <div class="specialHall_hashTag_wrap">
+                                    <span class="specialHall_hashTag">#신개념 소셜 상영관</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <strong>4DX</strong>
+                                <div class="specialHall_hashTag_wrap">
+                                    <span class="specialHall_hashTag">#모션시트 #오감체험</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <strong>CINE de CHEF</strong>
+                                <div class="specialHall_hashTag_wrap">
+                                    <span class="specialHall_hashTag">#쉐프가 있는 영화관</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 관람권, 기프트카드 -->
+        <div class="giftcon">
+            <div class="giftcon_wrap">
+                <ul class="giftcon_list_wrap">
+                    <li>
+                        <dl class="giftcon_list">
+                            <dt>
+                                영화관람권
+                                <a href="" alt="영화관람권" class="btn_more">더보기</a>
+                            </dt>
+                            <dd>
+                                <a href="">
+                                    <div class="giftcon_image_wrap">
+                                        <img src="./image/cgv영화관람권.jpg" alt="cgv 영화관람권">
+                                    </div>
+                                    <div class="giftcon_info_wrap">
+                                        <span>CGV 영화관람권</span>
+                                        <strong>13,000원</strong>
+                                    </div>
+                                </a>
+                            </dd>
+                            <dd>
+                                <a href="">
+                                    <div class="giftcon_image_wrap">
+                                        <img src="./image/IMAX영화관람권.jpg" alt="IMAX 영화관람권">
+                                    </div>
+                                    <div class="giftcon_info_wrap">
+                                        <span>IMAX 영화관람권</span>
+                                        <strong>18,000원</strong>
+                                    </div>
+                                </a>
+                            </dd>
+                            <dd>
+                                <a href="">
+                                    <div class="giftcon_image_wrap">
+                                        <img src="./image/4DX영화관람권.jpg" alt="4DX 영화관람권">
+                                    </div>
+                                    <div class="giftcon_info_wrap">
+                                        <span>4DX 영화관람권</span>
+                                        <strong>19,000원</strong>
+                                    </div>
+                                </a>
+                            </dd>
+                        </dl>
+                    </li>
+
+                    <li>
+                        <dl class="giftcon_list">
+                            <dt>
+                                기프트카드
+                                <a href="" alt="기프트카드" class="btn_more">더보기</a>
+                            </dt>
+                            <dd>
+                                <a href="">
+                                    <div class="giftcon_image_wrap">
+                                        <img src="./image/POPCONNIE_A.jpg" alt="PACONNIE A형">
+                                    </div>
+                                    <div class="giftcon_info_wrap">
+                                        <span>PACONNIE A형</span>
+                                        <strong>금액충전형</strong>
+                                    </div>
+                                </a>
+                            </dd>
+                            <dd>
+                                <a href="">
+                                    <div class="giftcon_image_wrap">
+                                        <img src="./image/POPCONNIE_B.jpg" alt="PACONNIE B형">
+                                    </div>
+                                    <div class="giftcon_info_wrap">
+                                        <span>PACONNIE B형</span>
+                                        <strong>금액충전형</strong>
+                                    </div>
+                                </a>
+                            </dd>
+                            <dd>
+                                <a href="">
+                                    <div class="giftcon_image_wrap">
+                                        <img src="./image/POPCONNIE_C.jpg" alt="PACONNIE C형">
+                                    </div>
+                                    <div class="giftcon_info_wrap">
+                                        <span>PACONNIE C형</span>
+                                        <strong>금액충전형</strong>
+                                    </div>
+                                </a>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- 공지사항 고객센터 -->
+        <div class="noticeClient">
+            <div class="noticeClient_wrap">
+                <div class="noticeClient_container">
+                    <div class="noticeClient_content">
+                        <div class="notice">
+                            <strong>공지사항</strong>
+                            <a href="/support/news/detail-view.aspx?idx=8001" class="btn_link">[행사/이벤트][CGV] 무대인사 예매취소 정책 변경 안내</a>
+                            <a href="http://www.cgv.co.kr/support/news/default.aspx" id="notice_more" class="btn_more">더보기</a>
+                        </div>
+                        <div class="cilent">
+                            <dl class="client_list">
+                                <dt>
+                                    <strong>고객센터</strong>
+                                </dt>
+                                <dd>
+                                    <strong>1544-1122</strong>
+                                    <span>
+                                        고객센터 운영시간 (평일 09:00~18:00)
+                                        <p>업무시간 외 자동응답 안내 가능합니다.</p>
+                                    </span>
+                                </dd>
+                            </dl>
+                            <div class="client_btn_wrap">
+                                <a href="">FAQ</a>
+                                <a href="">1:1 문의</a>
+                                <a href="">대관/단체 문의</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="qr">
+                        <strong>앱 다운로드</strong>
+                        <span>CGV앱에서 더 편리하게 이용하세요</span>
+                        <div class="qr_img">
+                            <img src="./image/App_QR.gif" alt="QR Code">
+                        </div>
+                        <p>
+                            QR코드를 스캔하고<br>
+                            앱설치 페이지로 바로 이동하세요
+                        </p>
+                    </div>
+                </div>
+                <div class="noticeClient_banner_wrap">
+                </div>
+            </div>
+
+        </div>
+        <!-- 예매하기, 맨위로 -->
+        <div class="fixedBtn_wrap topBtn">
+            <a href="" class="btn_fiexedTicketing">예매하기</a>
+            <a href="" class="btn_gotoTop">
+                <img src="./image/gotoTop.png" alt="맨위로">
+            </a>
+        </div>
+
+    </div>
 </body>
 </html>
