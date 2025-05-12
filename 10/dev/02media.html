@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: blueviolet;
+            background-color: beige;
+            border: 1px solid black;
+            margin-bottom: 10px;
+            text-align: center;   /* 인라인 가운데로 정렬하는 방법 */
+        }
+        /* 모바일 */
+        @media screen  and (max-width: 600px) {
+            .header1{
+                color: rgb(43, 226, 61);
+                background-color: rgb(167, 167, 60);
+                border: 1px solid black;
+                margin-bottom: 10px;
+                text-align: center;   /* 인라인 가운데로 정렬하는 방법 */
+            }
+        }
+        /* 테블릿 */
+        @media screen and (min-width: 600px) and (max-width: 990px) {
+            .header2{
+                color: rgb(226, 165, 43);
+                background-color: rgb(203, 203, 147);
+                border: 1px solid black;
+                margin-bottom: 10px;
+                text-align: center;   /* 인라인 가운데로 정렬하는 방법 */
+            }
+        }
+        /* PC */
+        @media screen and (min-width: 990px) and (max-width: 1200px) {
+            .header3{
+                color: rgb(0, 0, 0);
+                background-color: rgb(255, 255, 254);
+                border: 1px solid black;
+                margin-bottom: 10px;
+                text-align: center;   /* 인라인 가운데로 정렬하는 방법 */
+            }
+        }
+        /* 고해상도 PC */
+        @media screen and (min-width: 1200px) and (max-width: 1440px) {
+            .header4{
+                color: rgb(0, 0, 0);
+                background-color: rgb(225, 225, 13);
+                border: 1px solid black;
+                margin-bottom: 10px;
+                text-align: center;   /* 인라인 가운데로 정렬하는 방법 */
+            }
+        }
+        </style>
+</head>
+<body>
+    <h1 class="header1">HTML1</h1>
+    <h1 class="header2">HTML2</h1>
+    <h1 class="header3">HTML3</h1>
+    <h1 class="header4">HTML4</h1>
+</body>
+</html>

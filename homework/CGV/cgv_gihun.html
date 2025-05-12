@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CGV 이벤트 페이지</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #fff;
+    }
+    .top-banner {
+      width: 100%;
+      display: block;
+    }
+    .header-container {
+      background: #fff;
+      border-bottom: 2px solid #e60012;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .gnb-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 14px 20px 0;
+    }
+    .top-util-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: #555;
+      padding-bottom: 6px;
+    }
+    .top-util {
+      text-align: right;
+    }
+    .logo-line {
+      display: flex;
+      align-items: center;
+    }
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #e60012;
+      margin-right: 10px;
+    }
+    .slogan {
+      font-size: 16px;
+      color: #333;
+      letter-spacing: 1px;
+    }
+    .main-menu {
+      display: flex;
+      gap: 30px;
+      font-size: 16px;
+      margin-top: 10px;
+      justify-content: flex-start;
+      padding-left: 5px;
+    }
+    .main-menu .active {
+      color: #e60012;
+      border-bottom: 2px solid #e60012;
+    }
+    .event-title {
+      max-width: 1200px;
+      margin: 30px auto 10px;
+      padding: 0 20px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
+    .event-menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto 10px;
+      padding: 0 20px;
+      border-bottom: 2px solid #333;
+    }
+    .event-menu .tabs span {
+      margin-right: 20px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    .event-menu .tabs .active {
+      color: #e60012;
+      border-bottom: 2px solid #e60012;
+      padding-bottom: 5px;
+    }
+    .event-menu .buttons button {
+      margin-left: 10px;
+      padding: 6px 12px;
+      border: 1px solid #e60012;
+      background-color: #e60012;
+      color: #ffffff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .event-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      width: 75%;
+    }
+    .event-card {
+      border: 1px solid #ddd;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .event-card img {
+      width: 100%;
+    }
+    .event-card .info {
+      padding: 10px;
+    }
+    .event-card .title {
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+    .event-card .date {
+      font-size: 0.9em;
+      color: #666;
+    }
+    .side-banner {
+      width: 25%;
+      padding-left: 20px;
+    }
+    .side-banner img {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <iframe src="//ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@TopBar_EX" width="100%" height="80" title="" frameborder="0" scrolling="no" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0" name="TopBanner" id="TopBanner"></iframe>
+
+  <div class="header-container">
+    <div class="gnb-inner">
+      <div class="top-util-line">
+        <div class="logo-line">
+          <div class="logo"><img src="https://img.cgv.co.kr/R2014/images/common/logo/logoRed.png" alt="CGV"></div>
+          <div class="slogan"><span>DEEP DIVE SPACE</span></div>
+        </div>
+        <a href="http://www.cgv.co.kr/culture-event/event/detailViewUnited.aspx?seq=36085">
+                    <img src="https://img.cgv.co.kr/WingBanner/2025/0409/17441769177250.jpg" alt="프리텔레콤" onerror="this.onerror=null;javascript:;$('.ad-partner').hide();">
+                </a>
+        <div class="top-util">
+          <a href="/user/login/?returnURL=http%3a%2f%2fwww.cgv.co.kr%2fculture-event%2fevent%2fdefaultNew.aspx"><img src="https://img.cgv.co.kr/R2014/images/common/ico/loginPassword.png" alt="로그인"><span>로그인</span></a>
+          <a href="/user/join/"><img src="https://img.cgv.co.kr/R2014/images/common/ico/loginJoin.png" alt="회원가입"><span>회원가입</span></a>
+          <a href="/user/mycgv/"><img src="https://img.cgv.co.kr/R2014/images/common/ico/loginMember.png" alt="MY CGV"><span>MY CGV</span></a>
+          <a href="/support/default.aspx"><img src="https://img.cgv.co.kr/R2014/images/common/ico/loginCustomer.png" alt="고객센터"><span>고객센터</span></a>
+        </div>
+      </div>
+      <div class="main-menu">
+        <span>영화</span>
+        <span>극장</span>
+        <span class="active">예매</span>
+        <span>스토어</span>
+        <span>이벤트</span>
+        <span>혜택</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="event-title">EVENT</div>
+
+  <div class="event-menu">
+    <div class="tabs">
+      <span class="active">SPECIAL</span>
+      <span>영화/예매</span>
+      <span>멤버십/CLUB</span>
+      <span>CGV 극장별</span>
+      <span>제휴/할인</span>
+    </div>
+    <div class="buttons">
+      <button>당첨자 발표</button>
+      <button>종료된 이벤트</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="event-grid">
+      <div class="event-card">
+        <a id="tile_0" href="./detailViewUnited.aspx?seq=44340&amp;menu=001"><div class="evt-thumb"><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/44340/17458154428760.jpg" alt="5월엔 CGV가 오구오구"></div></a>
+        <div class="info">
+          <div class="title">5월엔 CGV가 오구오구</div>
+          <div class="date">2025.04.28~2025.05.16 · D-5</div>
+        </div>
+      </div>
+      <div class="event-card">
+        <a id="tile_1" href="./detailViewUnited.aspx?seq=44461&amp;menu=001"><div class="evt-thumb"><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/44461/17467796068480.jpg" alt="[미션 임파서블
+:파이널레코닝] 4DX 포스터"></div></a>
+        <div class="info">
+          <div class="title">[미션 임파서블: 데드 레코닝] 4DX 포스터</div>
+          <div class="date">2025.05.09~2025.05.24</div>
+        </div>
+      </div>
+      <div class="event-card">
+        <a id="tile_2" href="./detailViewUnited.aspx?seq=44462&amp;menu=001"><div class="evt-thumb"><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/44462/17467801619720.jpg" alt="[미션 임파서블
+:파이널레코닝] SX 포스터"></div></a>
+        <div class="info">
+          <div class="title">[미션 임파서블: 데드 레코닝] SX 포스터</div>
+          <div class="date">2025.05.09~2025.05.24</div>
+        </div>
+      </div>
+      <div class="event-card">
+        <a id="tile_3" href="./detailViewUnited.aspx?seq=44400&amp;menu=001"><div class="evt-thumb"><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/44400/17461540289610.jpg" alt="[극장판 귀멸의 칼날-
+무한열차편] 4DX 포스터"></div></a>
+        <div class="info">
+          <div class="title">극장판 귀멸의 칼날 무한열차편 포스터</div>
+          <div class="date">2025.05.02~2025.05.16 · D-5</div>
+        </div>
+      </div>
+      <div class="event-card">
+        <a id="tile_4" href="./detailViewUnited.aspx?seq=44366&amp;menu=001"><div class="evt-thumb"><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/44366/17459172832500.jpg" alt="[썬더볼츠]
+N차 관람 이벤트"></div></a>
+        <div class="info">
+          <div class="title">[썬더볼츠] N차 관람 이벤트</div>
+          <div class="date">2025.04.30~2025.05.13 · D-2</div>
+        </div>
+      </div>
+      <div class="event-card">
+        <a id="tile_5" href="./detailViewUnited.aspx?seq=44451&amp;menu=001"><div class="evt-thumb"><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/44451/17467603797090.jpg" alt="일본영화 세계관 기획전"></div></a>
+        <div class="info">
+          <div class="title">일본영화 세계관 기획전</div>
+          <div class="date">2025.05.09~2025.05.31</div>
+        </div>
+      </div>
+      <div class="event-card">
+        <a id="tile_6" href="./detailViewUnited.aspx?seq=44440&amp;menu=001"><div class="evt-thumb"><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/44440/17466917743690.jpg" alt="[미션 임파서블
+:파이널레코닝] TTT"></div></a>
+        <div class="info">
+          <div class="title">THAT'S THE TICKET</div>
+          <div class="date">2025.05.09~2025.05.31</div>
+        </div>
+      </div>
+      <div class="event-card">
+        <a id="tile_7" href="./detailViewUnited.aspx?seq=44447&amp;menu=001"><div class="evt-thumb"><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/44447/17467671067670.jpg" alt="파티다! 핑구 핑가
+파티 인형키링 출시♥"></div></a>
+        <div class="info">
+          <div class="title">파티대장 핑구 핑가 파티 인형키링 출시</div>
+          <div class="date">2025.05.07~2025.05.31</div>
+        </div>
+      </div>
+      <div class="event-card">
+        <a id="tile_8" href="./detailViewUnited.aspx?seq=44423&amp;menu=001"><div class="evt-thumb"><img src="https://img.cgv.co.kr/WebApp/contents/eventV4/44423/17466055445410.jpg" alt="[CINESHOP] 
+5월 굿즈 증정 이벤트"></div></a>
+        <div class="info">
+          <div class="title">[CINESHOP] 5월 굿즈 증정 이벤트</div>
+          <div class="date">2025.05.07~2025.05.31</div>
+        </div>
+      </div>
+    </div>
+    <div class="side-banner">
+      <img src="https://via.placeholder.com/260x380?text=세븐+베일즈+포스터" alt="세븐베일즈">
+      <img src="https://via.placeholder.com/260x380?text=헬스+이벤트+배너" alt="헬스 배너">
+    </div>
+  </div>
+
+</body>
+</html>

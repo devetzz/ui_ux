@@ -154,6 +154,7 @@ strong {
     color: #222;
     line-height: 1.429em;
     border: 1px solid #e2e2e2;
+    background: transparent url(./image/arrowR_8x13.png) calc(100% - 7px) center / 8px 13px scroll no-repeat;
     border-radius: 15px;
     box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.05);
 }
