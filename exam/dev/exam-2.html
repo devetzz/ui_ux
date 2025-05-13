@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding-top: 20px;
+            background-color: rgb(206, 232, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .wrap{
+            padding-top: 20px;
+            padding-left: 20px;
+            background-color: rgb(218, 218, 218);
+            width: 330px;
+            height: 470px;
+            border: 2px solid rgb(197, 197, 197);
+            display: flex;
+            align-items: center;
+        }
+        td, th{
+            text-align: left;
+            height: 60px;
+        }
+        input{
+            outline: none;
+            border: none;
+            border-bottom: 2px dashed black;
+            background-color: rgb(218, 218, 218);
+        }
+        span{
+            color: rgb(94, 94, 94);
+            font-size: x-small;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <form method='post' action='#'>
+            <table>
+                <tr>
+                    <th>아이디</th>
+                    <td>
+                        <input type='text' name='id' id="id" size="27"><br>
+                        <span id="id_warn"> </span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>패스워드</th>
+                    <td>
+                        <input type='password' name='pwd' id="pwd" size="27"><br>
+                        <span id="pwd_warn"> </span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>패스워드 확인</th>
+                    <td>
+                        <input type='password' name='pwdCheck' id="pwdCheck" size="27"><br>
+                        <span id="pwd2_warn"> </span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>이메일</th>
+                    <td>
+                        <input type='text' name='email' size="10">@<input type='text' name='email2' size="10">
+                    </td>
+                </tr>
+                <tr>
+                    <th>주소</th>
+                    <td>
+                        <input type='text' name='address' size="27"><br>
+                        <input type='type' name='address' size="27">
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2"></th>
+                </tr>
+                <tr>
+                    <th colspan="2"><input type='submit' value='가 입' style="width: 100%; height: 50px; background-color: rgb(224, 255, 207); color: rgb(71, 125, 43); font-size: large; font-weight: 600; border: none;"></th>
+                </tr>
+            </table>
+            
+        </form>
+    </div>
+
+    <script>
+        // 1. 객체 찾기
+        let id = document.querySelector("#id");
+        let id_warn = document.querySelector("#id_warn");
+        let pwd = document.querySelector("#pwd");
+        let pwd_warn = document.querySelector("#pwd_warn");
+        let pwdCheck = document.querySelector("#pwdCheck");
+        let pwd2_warn = document.querySelector("#pwd2_warn");
+        // 2. 이벤트 설정 = 함수 인터페이스 onfocus, onblur
+        id.onblur = function(event){
+            if(id.value.length < 1){
+                id_warn.innerHTML = '필수 입력 항목 입니다.';
+                id.value = '';
+            }else{
+                id_warn.value = '';
+            }
+        };
+        pwd.onfocus = event => pwd_warn.innerHTML = '영문자 대/소문자 특수문자, 숫자 포함 8~32자';
+        pwd.onblur = function(event){
+            if(pwd.value.length < 1){
+                pwd_warn.innerHTML = '필수 입력 항목 입니다.';
+                pwd.value = '';
+            }else{
+                pwd_warn.value = '';
+            }
+        };
+        pwdCheck.onblur = function(event){
+            if(pwdCheck.value.length < 1){
+                pwd2_warn.innerHTML = '필수 입력 항목 입니다.';
+                pwdCheck.value = '';
+            }else{
+                pwd2_warn.value = '';
+            }
+        };
+        
+
+    </script>
+    
+</body>
+</html>

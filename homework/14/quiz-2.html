@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .print_wrap{
+            text-align: center;
+        }
+        p{
+            color : red;
+        }
+    </style>
+</head>
+<body>
+    <h1>3의 배수 찾기</h1>
+
+    <div class="print_wrap">
+        <script>
+            let num = 0;
+            while(true){
+                num = window.prompt('몇 까지 3의 배수를 찾을까요?');
+                if(num !== null && num !== '' && isNaN(Number(num)) !== true){
+                    break;
+                }
+                window.alert('정확한 숫자를 입력해주세요!');
+            }
+            let count = 0;
+            for(let i = 0; i <= num; i++){
+                if(i != 0 && i % 3 == 0){
+                    document.write(`${i},`);
+                    count++;
+                }
+            }
+            
+            document.write(`<br><p>${num}까지 3의 배수의 개수 : ${count}</p>`);
+            
+            </script>
+    </div>
+</body>
+</html>
