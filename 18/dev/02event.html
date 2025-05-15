@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .wrap{
+            width: 1120px;
+            margin: 0 auto;
+            border: 3px dotted red;
+            padding: 10px;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            padding-left: 0;
+            gap: 5px;
+        }
+        li{
+            width: 140px;
+            text-align: center;
+        }
+        li > button{
+            width: 100%;
+            height: 100%;
+            font-size: large;
+            font-weight: 600;
+            padding: 10px 10px;
+        }
+        div#result{
+            width: 40%;
+            height: 300px;
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <ul>
+            <li><button onmouseover ="changeBg('green')">Green</button></li>
+            <li><button onmouseover ="changeBg('orange')">Orange</button></li>
+            <li><button onmouseover ="changeBg('purple')">Purple</button></li>
+            <li><button id="popupClose">닫기</button></li>
+        </ul>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        let btnList = document.querySelectorAll("button");
+        let popupClose = document.querySelector("#popupClose");
+
+        popupClose.onclick = function(event){
+            window.close();
+        };
+
+        function changeBg(color) {
+            let result = document.querySelector('#result');
+            result.style.backgroundColor = color;
+        }
+
+        for(let i= 0 ; i < btnList; i++){
+            btnList[i].onmouseover = e => {
+                let colorText = btnList[i].innerHTML;
+                result.style.backgroundColor = colorText;
+            };
+        }
+
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-size: medium;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        // 배열 선언 (2개 numArray, charArray) : 배열끼리 합치는 기능 concat()
+        let numArray = [1, 2, 3];
+        let charArray = ["a","b","c","d"];
+        document.write(`<h1>numArray = ${numArray.toString()}</h1> <br>`);
+        document.write(`<h1>charArray = ${charArray.toString()}</h1> <br>`);
+        document.write(`<hr>`);
+        let numCharArray = numArray.concat(charArray);
+        document.write(`<h1>numCharArray = ${numCharArray.toString()}</h1> <br>`);
+        let charNumArray = charArray.concat(numArray);
+        document.write(`<h1>charNumArray = ${charNumArray.toString()}</h1> <br>`);
+        document.write(`<hr>`);
+        // 배열 요소끼리 합치는 기능 join() charArray를 조인해서 문자열로 만들기
+        let strCharArray = charArray.join();
+        document.write(`<h1>charArray join = ${strCharArray.toString()}</h1> <br>`);
+        let joinCharArray = charArray.join("/");
+        document.write(`<h1>joinCharArray join = ${joinCharArray.toString()}</h1> <br>`);
+        document.write(`<hr>`);
+        // 배열에 ArrayList처럼 내용 추가(push, unshift) 및 삭제(pu) 기능
+        // push : 배열 뒤에 추가
+        let countArray = numArray.push(10, 20);
+        document.write(`<h1>countArray = ${countArray}</h1> <br>`);
+        document.write(`<h1>numArray = ${numArray}</h1> <br>`);
+        document.write(`<hr>`);
+        // unshift : 배열 앞에 추가
+        let count2Array = numArray.unshift(100, 200);
+        document.write(`<h1>count2Array = ${count2Array}</h1> <br>`);
+        document.write(`<h1>numArray = ${numArray}</h1> <br>`);
+        document.write(`<hr>`);
+        // pop : 배열의 뒤에서 가져오기
+        let popValue = numArray.pop();
+        document.write(`<h1>popValue = ${popValue}</h1> <br>`);
+        document.write(`<h1>numArray = ${numArray}</h1> <br>`);
+        document.write(`<hr>`);
+        // shift : 배열의 앞에서 가져오기
+        let shiftValue = numArray.shift();
+        document.write(`<h1>shiftValue = ${shiftValue}</h1> <br>`);
+        document.write(`<h1>numArray = ${numArray}</h1> <br>`);
+        document.write(`<hr>`);
+        // splice : 배열의 중간에서 가져오기 splice(시작번호, 개수)
+        let spliceArray = numArray.splice(2,1);
+        document.write(`<h1>spliceArray = ${spliceArray}</h1> <br>`);
+        document.write(`<h1>numArray = ${numArray}</h1> <br>`);
+        document.write(`<hr>`);
+        // splice : 삽입 기능도 있음 splice(시작번호, 개수, 넣을값)
+        let splice2Array = numArray.splice(1, 0, "k");
+        document.write(`<h1>splice2Array = ${splice2Array}</h1> <br>`);
+        document.write(`<h1>numArray = ${numArray}</h1> <br>`);
+        document.write(`<hr>`);
+        // slice : 배열내용은 그대로이고 내가 원하는 데이터만 가져가는 기능
+        // slice(시작, 끝) -> 시작번호 <= x < 끝번호(미포함)
+        let sliceValue = numArray.slice(2,5);
+        document.write(`<h1>sliceValue = ${sliceValue}</h1> <br>`);
+        document.write(`<h1>numArray = ${numArray}</h1> <br>`);
+        document.write(`<hr>`);
+
+   </script>
+</body>
+</html>

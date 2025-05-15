@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body onload="openPopup()">
+    <div class="wrap">
+        <button id="popup">팝업창열기</button>
+        <button id="popupClose">팝업창닫기</button>
+    </div>
+    <script>
+        // 1. 객체를 찾는다
+        let popup = document.querySelector("#popup");
+        let popupClose = document.querySelector("#popupClose");
+        let windowObject;  // undifined
+        // 2. 해당된 객체 (속성, context, style, 이벤트)
+        popup.onclick = function(event){
+            windowObject = window.open("02event.html", "event", "width=700, height=500, left=100, top=100");
+        };
+        popupClose.onclick = function(event){
+            windowObject.close();
+        };
+
+        let blocked = false;
+            function openPopup() {
+            let newWin = window.open('notice.html', 'pop', 'width=500, height=400');
+            if (newWin == null) {
+                alert("팝업이 차단되어 있습니다. 팝업 차단을 해제해 주세요.")
+            }
+        }
+        
+    </script>
+</body>
+</html>

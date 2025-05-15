@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .wrap{
+            width: 900px;
+            margin: 0 auto;
+            border: 3px solid red;
+        }
+        .content{
+            width: 60%;
+            margin: 0 auto;
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        #img-main{
+            width: 80%;
+            border: 3px dotted red;
+        }
+        .content-img{
+            display: flex;
+            justify-content: space-between;
+            border: 3px solid black;
+        }
+        .img-sub{
+            width: 33%;
+        }
+        .img-sub:hover{
+            cursor: pointer;
+            border: 3px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="content">
+            <img src="../images/coffee-pink.jpg" alt="커피" id="img-main">
+            <div class="content-img">
+                <img src="../images/coffee-blue.jpg" alt="커피" class="img-sub">
+                <img src="../images/coffee-gray.jpg" alt="커피" class="img-sub">
+                <img src="../images/coffee-pink.jpg" alt="커피" class="img-sub">
+            </div>
+        </div>
+    </div>
+    <script>
+        // 객체 찾기
+        let imgMain = document.querySelector("#img-main");
+        // 이벤트 함수 설정
+        // 방식1. (OLD)
+        // function changePic(message){
+        //     imgMain.src = "../images/coffee-blue.jpg";
+        // };
+        // function originPic(){
+        //     imgMain.src = "../images/coffee-pink.jpg";
+        // };
+        
+        // 방식2. 
+        // imgMain.onmouseover = changePic;
+        // imgMain.onmouseleave = originPic;
+
+        // function changePic(){
+        //     imgMain.src = "../images/coffee-blue.jpg";
+        // };
+        // function originPic(){
+        //     imgMain.src = "../images/coffee-pink.jpg";
+        // };
+
+        // 방식3. 
+        // imgMain.onmouseover = () => imgMain.src = "../images/coffee-blue.jpg";
+        // imgMain.onmouseleave = originPic;
+
+        // function originPic(){
+        //     imgMain.src = "../images/coffee-pink.jpg";
+        // };
+
+        // 방식4. ***addEventListner(event type, 화살표함수, 이벤트전파 방식)***
+        imgMain.addEventListener("mouseover", ()=>{
+            imgMain.src = "../images/coffee-blue.jpg";
+        }, false);
+
+        imgMain.addEventListener("mouseleave", ()=>{
+            imgMain.src = "../images/coffee-pink.jpg";
+        }, false);
+
+
+    </script>
+</body>
+</html>
