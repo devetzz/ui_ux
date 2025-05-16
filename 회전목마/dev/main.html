@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        ul{list-style: none;}
+        a{text-decoration: none; color: inherit;}
+        
+        #content{
+            width: 1000px;
+            /* height: 300px; */
+            margin: 100px auto 0;
+            border-radius: 20px;
+            position: relative;
+        }
+        /* 슬라이드 이미지 처리 */
+        #slide_show{
+            width: 100%;
+            height: 300px;
+            position: relative;
+        }
+        img{
+            max-width: 100%;
+            height: 100%;
+            position: absolute;
+            border-radius: 20px;
+        }
+        #navigateleft{
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: rgba(155, 155, 155, 0.8);
+            position: absolute;
+            bottom: 50%;
+            left: 10%;
+            transform: translate(-50%,50%);
+            z-index: 1;
+        }
+        #navigateright{
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: rgba(155, 155, 155, 0.8);
+            position: absolute;
+            bottom: 50%;
+            right: 10%;
+            transform: translate(50%,50%);
+            z-index: 1;
+        }
+        #navigateleft:hover, #navigateright:hover{
+            color: white;
+            cursor: pointer;
+        }
+        /* indicator 처리 */
+        #indicator{
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translate(-50%,0);
+            color: rgba(155, 155, 155, 0.8);
+            z-index: 1;
+        }
+        #indicator i{
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        #indicator i:hover{
+            color: white;
+        }
+        /* indicator 활성화 배경색 */
+        .active{
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div id="content">
+            <div id="slide_show">
+                <a href="#"><img src="./../media/slide-1.jpg" alt="#"></a>
+                <a href="#"><img src="./../media/slide-2.jpg" alt="#"></a>
+                <a href="#"><img src="./../media/slide-3.jpg" alt="#"></a>
+                <a href="#"><img src="./../media/slide-4.jpg" alt="#"></a>
+            </div>
+            <i class="fa-solid fa-circle-chevron-left" id="navigateleft"></i>
+            <i class="fa-solid fa-circle-chevron-right" id="navigateright"></i>
+            <div id="indicator">
+                <a href="#" class="active"><i class="fa-solid fa-circle-dot"></i></a>
+                <a href="#"><i class="fa-solid fa-circle-dot"></i></a>
+                <a href="#"><i class="fa-solid fa-circle-dot"></i></a>
+                <a href="#"><i class="fa-solid fa-circle-dot"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            // 1. 객체 찾기
+            const content = document.querySelector("#content");                 //회전목마 전체레이아웃
+            const imgList = document.querySelectorAll("#slide_show img");       //회전목마 이미지 배열 리스트 노드
+            const navLeft = document.querySelector("#navigateleft");            //회전목마 왼쪽 화살표
+            const navRight = document.querySelector("#navigateright");          //회전목마 오른쪽 화살표
+            const indicatorList = document.querySelectorAll("#indicator > a");  //회전목마 indicator a
+
+            // 2. 객체()
+            // 함수 : 시간에 따라서 이미지1, 인디케이터1이 선택 되어 화면에 보여줘야 한다.
+            let list = [1, 0, 0, 0];
+            let timerId;            // 타이머 핸들
+            function listArray(){
+                for(let  i = 0; i < list.length; i++){
+                    imgList[i].style.zIndex = list[i];
+                }
+                for(let  i = 0; i < indicatorList.length; i++){
+                    indicatorList[i].classList.remove('active');
+                }
+                let index = list.indexOf(1);
+                indicatorList[index].classList.add('active');
+            }
+            listArray();
+
+            // 왼쪽 화살표 클릭하면 왼쪽 이미지로 이동
+            navLeft.addEventListener("click", () => {
+                list.push(list.shift());
+                listArray();
+            });
+            
+            // 오른쪽 화살표 클릭하면 오른쪽 이미지로 이동
+            navRight.addEventListener("click", () => {
+                list.unshift(list.pop());
+                listArray();
+            });
+
+            // 3초마다 navRight 수행
+            function startTimer(){
+                timerId = setInterval(()=>{
+                    list.unshift(list.pop());
+                    listArray();
+                }, 3000);
+            }
+            startTimer();
+            
+            // content 영역에 마우스가 올라가면 타이머 정지
+            content.addEventListener("mouseenter", ()=>{clearInterval(timerId)});
+
+            // content 영역에 마우스가 빠져나가면 타이머 재시작
+            content.addEventListener("mouseleave", ()=>{startTimer()});
+
+            // indicator 클릭하면 해당되는 이미지 출력
+            for(let i = 0 ;i < indicatorList.length ; i++){
+                indicatorList[i].addEventListener("click", ()=>{
+                    list = [0, 0, 0, 0];
+                    list[i] = 1;
+                    listArray();
+                });
+            }
+        });
+
+    </script>
+
+</body>
+</html>
