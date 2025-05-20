@@ -5,6 +5,8 @@ function onLoad(){
     let pwPattern = /^[\w]{6,8}$/;
     let namePattern = /^[가-힣]{1,4}$/;
     let nicknamePattern = /^(?=.{2,}$)(?!.*\s)[가-힣a-zA-Z0-9]+$/;
+    let emailPattern = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+
     let telPattern = /^01[016789]-\d{3,4}-\d{4}$/;
     let phoneNumPattern = /^01[016789]-\d{3,4}-\d{4}$/;
     
@@ -20,6 +22,7 @@ function onLoad(){
     let addr1 = document.querySelector("#addr1");
 
     let nickname = document.querySelector("#nickname");
+    let email = document.querySelector("#email");
     let tel = document.querySelector("#tel");
     let phoneNum = document.querySelector("#phoneNum");
 
@@ -71,6 +74,10 @@ function onLoad(){
 
     nickname.addEventListener("blur", () => {
         validate(nickname, nicknamePattern, "공백 없이 한글 2자 이상 또는 영문 4자 이상 입력하세요.");
+    });
+
+    email.addEventListener("blur", () => {
+        validate(email, emailPattern, "이메일 형식에 맞게 입력하세요.");
     });
 
     tel.addEventListener("blur", () => {
