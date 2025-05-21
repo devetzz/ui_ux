@@ -1,5 +1,7 @@
 // onLoad() : 전체 document가 메모리에 모두 로드 되었을 때 함수 호출
 function onLoad(){
+
+    // 회전목마 시작
     // 1. 객체 찾기
     const rotation = document.querySelector("#rotation");                 //회전목마 전체레이아웃
     const imgList = document.querySelectorAll("#slide_show img");       //회전목마 이미지 배열 리스트 노드
@@ -58,4 +60,107 @@ function onLoad(){
             listArray();
         });
     }
+    // 회전목마 끝
+
+    // 패턴 검색 시작
+    // id 패턴검색을 진행할 이벤트 정의
+    let idPattern = /^[\w]{3,12}$/;
+    let idEmailPattern = /^@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+    let pwPattern = /^[\w]{6,8}$/;
+    let namePattern = /^[가-힣]{1,4}$/;
+
+    let yearPattern = /^[0-9]{4}$/;
+    let monthPattern = /^[0-9]{2}$/;
+    let dayPattern = /^[0-9]{2}$/;
+
+
+    let genderPattern = /^[남,여,m,f,M,F]{1}$/;
+    let telPattern = /^01[016789]-\d{3,4}-\d{4}$/;
+    let checkNumPattern = /^[0-9]{6}$/;
+
+    let id = document.querySelector("#id");
+    let idEmail = document.querySelector("#idEmail");
+    let pw = document.querySelector("#pw");
+    let pwCheck = document.querySelector("#pwCheck");
+    let name = document.querySelector("#name");
+
+    let year = document.querySelector("#year");
+    let month = document.querySelector("#month");
+    let day = document.querySelector("#day");
+    
+    let tel = document.querySelector("#tel");
+    let checkNum = document.querySelector("#checkNum");
+    let submit = document.querySelector("#submit");
+
+
+    // 회원가입 전송 기능 점검
+    join.addEventListener("click", function(){
+        // id
+        let idReturn = validate(id, idPattern, "아이디는 영문자, 숫자, _만 입력 가능. 최소 3자이상 12자이하 입력하세요.");
+        if(idReturn === false) return;
+        let idEmailReturn = validate(idEmail, idEmailPattern, "@naver.com 등의 형식을 입력하세요.");
+        if(idEmailReturn === false) return;
+        // pw
+        let pwReturn = validate(pw, pwPattern, "암호는 영문자, 숫자, _만 입력 가능. 최소 6자이상 8자이하 입력하세요.");
+        if(pwReturn === false) return;
+        let pwCheckReturn = (pw.value === pwCheck.value) ? true : false;
+        if(pwCheckReturn === false){
+            alert("패스워드 확인이 일치하지 않습니다.");
+            pwCheck.value = "";
+            pwCheck.focus();
+            return;
+        }
+
+        let nameReturn = validate(name, namePattern, "이름을 입력하세요.");
+        if(nameReturn === false) return;
+        let yearReturn = validate(year, yearPattern, "생년을 입력하세요.");
+        if(yearReturn === false) return;
+        let monthReturn = validate(month, monthPattern, "월을 입력하세요.");
+        if(monthReturn === false) return;
+        let dayReturn = validate(day, dayPattern, "일을 입력하세요.");
+        if(dayReturn === false) return;
+        let genderReturn = validate(gender, genderPattern, "성별을 입력하세요.");
+        if(genderReturn === false) return;
+
+        let telReturn = validate(tel, telPattern, "휴대폰 번호를 입력하세요.");
+        if(telReturn === false) return;
+        let checkNumReturn = validate(checkNum, checkNumPattern, "인증 번호를 확인하세요.");
+        if(checkNumReturn === false) return;
+        
+        alert('서버에 전송');
+        window.location.href = './login_form.html'
+    }); 
+
+    // 공동으로 사용되는 함수
+    function validate(inputObj, pattern, message){
+        if(inputObj.value.match(pattern)){
+            return true;
+        }else{
+            alert(message);
+            inputObj.value = "";
+            inputObj.focus();
+            return false;
+        }
+    }
+
+    // 취소 버튼 모두 지우기
+    let reset = document.querySelector("#reset");
+    reset.addEventListener("click", ()=>{
+        let input = document.querySelectorAll("input");
+        for(let i = 0; i < input.length; i++){
+            input[i].innerHTML = "";    
+            // if(){
+
+            // }
+        }
+    });
+
+    // 패턴 검색 끝
+
+
+
+
+
+
+
 }
