@@ -128,7 +128,13 @@ function onLoad(){
         if(checkNumReturn === false) return;
         
         alert('서버에 전송');
-        window.location.href = './login_form.html'
+
+        let loginPage = document.querySelector(".login_wrap");
+        let joinPage = document.querySelector(".inMain");
+
+        loginPage.style.display = "flex";
+        joinPage.style.display = "none";
+
     }); 
 
     // 공동으로 사용되는 함수
@@ -143,20 +149,28 @@ function onLoad(){
         }
     }
 
-    // 취소 버튼 모두 지우기
-    let reset = document.querySelector("#reset");
-    reset.addEventListener("click", ()=>{
-        let input = document.querySelectorAll("input");
-        for(let i = 0; i < input.length; i++){
-            input[i].innerHTML = "";    
-            // if(){
-
-            // }
-        }
-    });
+    
 
     // 패턴 검색 끝
 
+    // 로그인 패턴 검색
+    let btnLogin = document.querySelector("#btnLogin");
+
+    btnLogin.addEventListener("click", ()=>{
+        if(loginId.value.length < 4){
+            warningText.innerHTML = "아이디는 4자 이상입니다.";
+            warningText.style.color = "tomato";
+            id.focus();
+            return;
+        }
+        if(loginPw.value.length < 6){
+            warningText.innerHTML = "암호는 6자 이상입니다.";
+            warningText.style.color = "tomato";
+            pw.focus();
+            return;
+        }
+        alert('서버에 전송');
+    });
 
 
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MIRE PHOTO</title>
     <script src="./mirephoto.js"></script>
     <link rel="stylesheet" href="./mirephoto.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -107,7 +107,52 @@
                     <li><button id="join"><a href="#">가입 하기</a></button></li>
                 </ul>
 
+                
             </div>
+            <!-- 로그인 영역 시작 -->
+            <div class="login_wrap">
+                <form method="get" action="insert.do">
+                    <div class="login">
+                        <table>
+                            <caption>로그인</caption>
+                            <colgroup>
+                                <col id="col1">
+                                <col id="col2">
+                                <col id="col3">
+                            </colgroup>
+                            <tr>
+                                <td><input type="radio" name="member" id="member" checked>회원</td>
+                                <td><input type="radio" name="member" id="nonMember">비회원(주문조회)</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><input type="text" name="id" id="loginId" placeholder="아이디"></td>
+                                <td rowspan="2" id="loginBtnTd"><button type="button" id="btnLogin">로그인</button></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><input type="password" name="pw" id="loginPw"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><input type="checkbox" name="saveId" id="saveId"> 아이디저장</td>
+                                <td>OTP 로그인 <input type="checkbox" name="otpLogin" id="otpLogin"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3"><span id="warningText"></span></td>
+                            </tr>
+                            
+                        </table>
+                        <div class="buttons">
+                            <td colspan="3">
+                                <a href="./memberjoin.html" target="_blank"><button id="btn1">회원가입</button></a>
+                                <button id="btn2">아이디 찾기</button>
+                                <button id="btn3">비밀번호 찾기</button>
+                            </td>
+                        </div>
+                    </div>
+                        
+                </form>
+            </div>
+            <!-- 로그인 영역 끝 -->
             <aside class="aside">ASIDE</aside>
         </main>
         <footer>
