@@ -111,21 +111,32 @@ function onLoad(){
             return;
         }
 
-        let nameReturn = validate(name, namePattern, "이름을 입력하세요.");
+        let nameReturn = validate(name, namePattern, "이름을 확인해주세요.");
         if(nameReturn === false) return;
-        let yearReturn = validate(year, yearPattern, "생년을 입력하세요.");
+        let yearReturn = validate(year, yearPattern, "생년을 확인해주세요.");
         if(yearReturn === false) return;
-        let monthReturn = validate(month, monthPattern, "월을 입력하세요.");
+        let monthReturn = validate(month, monthPattern, "월을 확인해주세요.");
         if(monthReturn === false) return;
-        let dayReturn = validate(day, dayPattern, "일을 입력하세요.");
+        let dayReturn = validate(day, dayPattern, "일을 확인해주세요.");
         if(dayReturn === false) return;
-        let genderReturn = validate(gender, genderPattern, "성별을 입력하세요.");
+        let genderReturn = validate(gender, genderPattern, "성별을 확인해주세요.");
         if(genderReturn === false) return;
 
-        let telReturn = validate(tel, telPattern, "휴대폰 번호를 입력하세요.");
+        let telReturn = validate(tel, telPattern, "휴대폰 번호를 확인해주세요.");
         if(telReturn === false) return;
-        let checkNumReturn = validate(checkNum, checkNumPattern, "인증 번호를 확인하세요.");
+        
+
+        let checkNumReturn = false;
+            
+        if(checkNum.value == randomNum){
+            checkNumReturn = true;
+        }else{
+            checkNumReturn = false;
+            alert("인증번호를 다시 확인해주세요.");
+        }
         if(checkNumReturn === false) return;
+
+
         
         alert('서버에 전송');
 
@@ -172,9 +183,14 @@ function onLoad(){
         alert('서버에 전송');
     });
 
+    // 인증번호 출력
+    let passNum = document.querySelector("#passNum");
+    let randomNum = "";
 
-
-
+    passNum.addEventListener("click", ()=>{
+        randomNum = Math.floor(100000 + Math.random() * 900000).toString(); // 6자리 랜덤 숫자
+      alert("인증번호: " + randomNum);
+    });
 
 
 }
